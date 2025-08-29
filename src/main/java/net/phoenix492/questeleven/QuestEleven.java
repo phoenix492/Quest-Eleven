@@ -1,5 +1,7 @@
 package net.phoenix492.questeleven;
 
+import net.phoenix492.questeleven.item.ModItems;
+import net.phoenix492.questeleven.sound.ModSounds;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -24,8 +26,6 @@ public class QuestEleven {
 
 
     public static final Logger LOGGER = LogUtils.getLogger();
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
@@ -33,12 +33,16 @@ public class QuestEleven {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        ITEMS.register(modEventBus);
-        CREATIVE_MODE_TABS.register(modEventBus);
+        // Register Items
+        ModItems.register(modEventBus);
 
-        NeoForge.EVENT_BUS.register(this);
+        // Register Creative Mode Tab
+        ModCreativeModeTab.register(modEventBus);
 
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        // Register Sounds
+        ModSounds.register(modEventBus);
+
+        modContainer.registerConfig(ModConfig.Type.COMMON, QuestElevenConfig.SPEC);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

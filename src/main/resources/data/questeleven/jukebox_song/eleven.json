@@ -1,0 +1,11 @@
+{
+  "sound_event": {
+    "sound_id": "questeleven:music_disc_eleven"
+  },
+  "description": {
+    "type": "translatable",
+    "translate": "item.questeleven.music_disc_eleven.desc"
+  },
+  "length_in_seconds": 71,
+  "comparator_output": 11
+}

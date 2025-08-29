@@ -7,6 +7,7 @@ import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.phoenix492.questeleven.QuestEleven;
+import net.phoenix492.questeleven.item.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
@@ -16,7 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-
+        basicItem(ModItems.MUSIC_DISC_ELEVEN.get());
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
