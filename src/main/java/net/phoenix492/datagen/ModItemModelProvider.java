@@ -6,45 +6,16 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import net.phoenix492.testmod.TestMod;
-import net.phoenix492.testmod.block.ModBlocks;
-import net.phoenix492.testmod.item.ModItems;
+import net.phoenix492.questeleven.QuestEleven;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, TestMod.MODID, existingFileHelper);
+        super(output, QuestEleven.MODID, existingFileHelper);
     }
 
     @Override
     protected void registerModels() {
-        basicItem(ModItems.RAW_BISMUTH.get());
-        basicItem(ModItems.BISMUTH.get());
-        basicItem(ModItems.RADISH.get());
-        basicItem(ModItems.STARLIGHT_ASHES.get());
-        basicItem(ModItems.FROSTFIRE_ICE.get());
-        basicItem(ModItems.CHISEL.get());
-        basicItem(ModBlocks.BISMUTH_DOOR.asItem());
-
-        basicItem(ModItems.BISMUTH_HELMET.get());
-        basicItem(ModItems.BISMUTH_CHESTPLATE.get());
-        basicItem(ModItems.BISMUTH_LEGGINGS.get());
-        basicItem(ModItems.BISMUTH_BOOTS.get());
-
-        basicItem(ModItems.PHOENIX_SMITHING_TEMPLATE.get());
-
-        basicItem(ModItems.BISMUTH_HORSE_ARMOR.get());
-
-        buttonItem(ModBlocks.BISMUTH_BUTTON, ModBlocks.BISMUTH_BLOCK);
-        fenceItem(ModBlocks.BISMUTH_FENCE, ModBlocks.BISMUTH_BLOCK);
-        wallItem(ModBlocks.BISMUTH_WALL, ModBlocks.BISMUTH_BLOCK);
-
-        handheldItem(ModItems.BISMUTH_SWORD.get());
-        handheldItem(ModItems.BISMUTH_PICKAXE.get());
-        handheldItem(ModItems.BISMUTH_SHOVEL.get());
-        handheldItem(ModItems.BISMUTH_HOE.get());
-        handheldItem(ModItems.BISMUTH_AXE.get());
-        handheldItem(ModItems.BISMUTH_HAMMER.get());
 
     }
 
@@ -53,7 +24,7 @@ public class ModItemModelProvider extends ItemModelProvider {
             .texture(
                 "texture",
                 ResourceLocation.fromNamespaceAndPath(
-                    TestMod.MODID,
+                    QuestEleven.MODID,
                     "block/" + baseBlock.getId().getPath()
                 )
             );
@@ -64,7 +35,7 @@ public class ModItemModelProvider extends ItemModelProvider {
             .texture(
                 "texture",
                 ResourceLocation.fromNamespaceAndPath(
-                    TestMod.MODID,
+                    QuestEleven.MODID,
                     "block/" + baseBlock.getId().getPath()
                 )
             );
@@ -75,7 +46,7 @@ public class ModItemModelProvider extends ItemModelProvider {
             .texture(
                 "wall",
                 ResourceLocation.fromNamespaceAndPath(
-                    TestMod.MODID,
+                    QuestEleven.MODID,
                     "block/" + baseBlock.getId().getPath()
                 )
             );
