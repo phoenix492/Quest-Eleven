@@ -24,16 +24,25 @@ public class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        // Server/Datapack DataGen
+        // Server/DataPack DataGen
         BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTagsProvider);
-
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new ModDataMapProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new ModDatapackProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new ModItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
+        generator.addProvider(
+            event.includeServer(),
+            new LootTableProvider(
+                packOutput,
+                Collections.emptySet(),
+                List.of(new LootTableProvider.SubProviderEntry(ModEntityAdditionsLootTableProvider::new, LootContextParamSets.ENTITY)),
+                lookupProvider
+            )
+        );
+        generator.addProvider(event.includeServer(), new ModGlobalLootModifierProvider(packOutput, lookupProvider));
 
-        // Client/Resourcepack Datagen
+        // Client/ResourcePack DataGen
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModBlockstateProvider(packOutput, existingFileHelper));
 

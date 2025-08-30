@@ -22,6 +22,11 @@ public class ModItems {
         )
     );
 
+    public static final DeferredItem<Item> SCULK_DISC_TEMPLATE = ITEMS.register(
+        "sculk_disc_template",
+        () -> new Item(new Item.Properties().rarity(Rarity.EPIC))
+    );
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

@@ -11,6 +11,6 @@
     "id": "questeleven:music_disc_eleven"
   },
   "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
+    "item": "questeleven:sculk_disc_template"
   }
 }

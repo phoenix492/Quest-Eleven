@@ -1,5 +1,8 @@
 {
   "creativetab.questeleven.items": "Quest Eleven",
   "item.questeleven.music_disc_eleven": "Music Disc",
-  "item.questeleven.music_disc_eleven.desc": "C418 - Eleven"
+  "item.questeleven.sculk_disc_template": "Sculk Music Disc Template",
+  "item.questeleven.music_disc_eleven.desc": "C418 - Eleven",
+  "advancements.questeleven.divine_judgement.title": "Divine Judgement",
+  "advancements.questeleven.divine_judgement.description": "Silence your nightmares in single blow by falling from the heavens!"
 }

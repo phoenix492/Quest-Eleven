@@ -18,6 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.MUSIC_DISC_ELEVEN.get());
+        basicItem(ModItems.SCULK_DISC_TEMPLATE.get());
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {

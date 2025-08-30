@@ -1,0 +1,49 @@
+{
+  "parent": "minecraft:adventure/overoverkill",
+  "criteria": {
+    "oneshot_warden": {
+      "conditions": {
+        "damage": {
+          "type": {
+            "direct_entity": {
+              "type": "minecraft:player",
+              "equipment": {
+                "mainhand": {
+                  "items": "minecraft:mace"
+                }
+              }
+            },
+            "tags": [
+              {
+                "expected": true,
+                "id": "minecraft:is_player_attack"
+              }
+            ]
+          },
+          "dealt": {
+            "min": 500.0
+          }
+        },
+        "entity": {
+          "type": "minecraft:warden"
+        }
+      },
+      "trigger": "minecraft:player_hurt_entity"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.questeleven.divine_judgement.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "questeleven:sculk_disc_template"
+    },
+    "title": {
+      "translate": "advancements.questeleven.divine_judgement.title"
+    },
+    "hidden": true,
+    "show_toast": false
+  }
+}
