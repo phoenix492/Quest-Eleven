@@ -25,3 +25,4 @@ run-data
 
 repo
 /src/generated/resources/.cache/
+/src/main/resources/assets/questeleven/textures/item/music_disc_eleven_with_palette.png

@@ -20,6 +20,7 @@ public class ModCreativeModeTab {
             .title(Component.translatable("creativetab.questeleven.items"))
             .displayItems((itemDisplayParameters, output) -> {
                 output.accept(ModItems.MUSIC_DISC_ELEVEN);
+                output.accept(ModItems.SCULK_DISC_TEMPLATE);
             }).build()
     );
 

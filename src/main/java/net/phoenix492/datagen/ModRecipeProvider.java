@@ -25,8 +25,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
         PerformantSmithingTransformRecipeBuilder.smithing(
-            Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+            Ingredient.of(ModItems.SCULK_DISC_TEMPLATE.get()),
             Ingredient.of(Items.MUSIC_DISC_11),
+
             Ingredient.of(Items.ECHO_SHARD),
             RecipeCategory.MISC, // Doesn't do anything
             ModItems.MUSIC_DISC_ELEVEN.get()

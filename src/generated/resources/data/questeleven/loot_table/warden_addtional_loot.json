@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "questeleven:sculk_disc_template"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "questeleven:warden_addtional_loot"
+}
