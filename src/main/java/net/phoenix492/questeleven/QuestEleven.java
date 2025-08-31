@@ -1,6 +1,8 @@
 package net.phoenix492.questeleven;
 
+import net.phoenix492.questeleven.data_attachements.ModDataAttachments;
 import net.phoenix492.questeleven.item.ModItems;
+import net.phoenix492.questeleven.loot.ModLootItemConditions;
 import net.phoenix492.questeleven.sound.ModSounds;
 import org.slf4j.Logger;
 
@@ -24,7 +26,6 @@ public class QuestEleven {
     // This NEVER changes.
     public static final String MODID = "questeleven";
 
-
     public static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -42,11 +43,16 @@ public class QuestEleven {
         // Register Sounds
         ModSounds.register(modEventBus);
 
+        // Register Data Attachments
+        ModDataAttachments.register(modEventBus);
+
+        // Register loot conditions
+        ModLootItemConditions.register(modEventBus);
+
         modContainer.registerConfig(ModConfig.Type.COMMON, QuestElevenConfig.SPEC);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        // Some common setup code
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

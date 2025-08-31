@@ -1,5 +1,10 @@
 {
   "type": "neoforge:add_table",
-  "conditions": [],
-  "table": "questeleven:warden_aditional_loot"
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:entities/warden"
+    }
+  ],
+  "table": "questeleven:warden_additional_loot"
 }

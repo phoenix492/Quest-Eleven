@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "disc_eleven": {
+      "conditions": {
+        "items": [
+          {
+            "items": "questeleven:sculk_disc_template"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "questeleven:disc_eleven_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "disc_eleven"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "questeleven:disc_eleven_smithing"
+    ]
+  }
+}

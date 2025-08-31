@@ -4,12 +4,10 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
-import net.phoenix492.datagen.builders.PerformantSmithingTransformRecipeBuilder;
 import net.phoenix492.questeleven.QuestEleven;
 import net.phoenix492.questeleven.item.ModItems;
 
@@ -24,14 +22,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
-        PerformantSmithingTransformRecipeBuilder.smithing(
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SCULK_DISC_TEMPLATE, 2)
+            .pattern("ETE")
+            .pattern("ECE")
+            .pattern("EEE")
+            .define('E', Items.ECHO_SHARD)
+            .define('T', ModItems.SCULK_DISC_TEMPLATE)
+            .define('C', Items.SCULK_CATALYST)
+            .unlockedBy("sculk_disc_template", has(ModItems.SCULK_DISC_TEMPLATE))
+        .save(recipeOutput);
+
+        SmithingTransformRecipeBuilder.smithing(
             Ingredient.of(ModItems.SCULK_DISC_TEMPLATE.get()),
             Ingredient.of(Items.MUSIC_DISC_11),
-
             Ingredient.of(Items.ECHO_SHARD),
             RecipeCategory.MISC, // Doesn't do anything
-            ModItems.MUSIC_DISC_ELEVEN.get()
-        )
+            ModItems.MUSIC_DISC_ELEVEN.get())
+        .unlocks("disc_eleven", has(ModItems.SCULK_DISC_TEMPLATE))
         .save(recipeOutput, ResourceLocation.parse("questeleven:disc_eleven_smithing"));
 
         super.buildRecipes(recipeOutput);
