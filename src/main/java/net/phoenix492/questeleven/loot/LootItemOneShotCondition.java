@@ -30,9 +30,7 @@ public record LootItemOneShotCondition() implements LootItemCondition {
 
     @Override
     public boolean test(LootContext context) {
-        QuestEleven.LOGGER.info("Testing LootItemOneShotCondition");
         Entity killedEntity = context.getParamOrNull(LootContextParams.THIS_ENTITY);
-        QuestEleven.LOGGER.info("killedEntity hasData ModDataAttachments.ENTITY_ONESHOT: " + killedEntity.hasData(ModDataAttachments.ENTITY_ONESHOT.get()));
         return killedEntity.hasData(ModDataAttachments.ENTITY_ONESHOT.get()) && killedEntity.getData(ModDataAttachments.ENTITY_ONESHOT.get());
     }
 
