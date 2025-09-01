@@ -1,7 +1,10 @@
 {
   "music_disc_eleven": {
     "sounds": [
-      "questeleven:records/music_disc_eleven"
+      {
+        "name": "questeleven:records/music_disc_eleven",
+        "stream": true
+      }
     ]
   }
 }
