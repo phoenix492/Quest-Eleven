@@ -1,4 +1,4 @@
-package net.phoenix492.datagen;
+package net.phoenix492.questeleven.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;

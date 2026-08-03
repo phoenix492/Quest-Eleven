@@ -1,4 +1,4 @@
-package net.phoenix492.datagen;
+package net.phoenix492.questeleven.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;

@@ -1,4 +1,4 @@
-package net.phoenix492.datagen.builders;
+package net.phoenix492.questeleven.datagen.builders;
 
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;

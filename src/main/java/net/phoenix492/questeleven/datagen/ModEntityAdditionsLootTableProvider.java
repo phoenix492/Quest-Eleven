@@ -1,4 +1,4 @@
-package net.phoenix492.datagen;
+package net.phoenix492.questeleven.datagen;
 
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.HolderLookup;
@@ -17,7 +17,7 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.phoenix492.questeleven.QuestEleven;
 import net.phoenix492.questeleven.item.ModItems;
 import net.phoenix492.questeleven.loot.LootItemOneShotCondition;
-import net.phoenix492.questeleven.loot.ModLootItemConditions;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.BiConsumer;
